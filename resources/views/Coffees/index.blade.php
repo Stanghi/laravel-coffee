@@ -3,7 +3,14 @@
 @section('content')
     <div class="container">
 
-        <a href=" {{route('coffees.create')}} " class="btn btn-primary my-2">Add Coffee</a>
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <a href=" {{ route('coffees.create') }} " class="btn btn-primary my-4">Add Coffee</a>
+
 
         <table class="table table-striped">
             <thead>
