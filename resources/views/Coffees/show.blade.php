@@ -2,7 +2,10 @@
 
 
 @section('content')
- <div class="container">
-    
+ <div class="container m-auto text-center">
+    <img class="mb-4" src="{{ $coffee->image }}" alt="{{ $coffee->title }}">
+    <h3>{{ $coffee->title }}</h3>
+    <p>{{ $coffee->description }}</p>
+    <p>{{ $coffee->ingredients }}</p>
  </div>
 @endsection

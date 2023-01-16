@@ -22,7 +22,7 @@
                         <td>{{ $coffee->ingredients }}</td>
                         <td>
                             <div class="d-flex justify-content-around">
-                                <a href="#" title="Show" class="btn btn-outline-primary"><i
+                                <a href="{{ route('coffees.show', $coffee) }}" title="Show" class="btn btn-outline-primary"><i
                                         class="fa-solid fa-eye"></i></a>
                                 <a href="#" title="Edit" class="btn btn-outline-primary"><i
                                         class="fa-solid fa-pen"></i></a>
