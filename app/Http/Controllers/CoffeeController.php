@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CoffeeRequest;
 use App\Models\Coffee;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class CoffeeController extends Controller
      */
     public function create()
     {
-        return view('coffee.create');
+        return view('coffees.create');
     }
 
     /**
@@ -34,9 +35,17 @@ class CoffeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CoffeeRequest $request)
     {
-        //
+        $form_data = $request->all();
+        $new_coffee = new Coffee();
+
+        $form_data['slug'] = Coffee::generateSlug($form_data['title']);
+        $new_coffee->fill($form_data);
+
+        $new_coffee->save();
+
+        return redirect()->route('coffees.index')->with('success', 'Coffee added successfully');
     }
 
     /**

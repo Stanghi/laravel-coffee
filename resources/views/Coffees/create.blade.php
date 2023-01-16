@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layout.main')
 
 @section('content')
         <div class="container">
@@ -10,8 +10,14 @@
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
                     <input type="text" name="title"
-                        class="form-control"
+                        class="form-control @error('title')
+                        is-invalid  @enderror"
                         id="title" placeholder="inserire titolo" value=" {{old('title')}} ">
+                        <div class="invalid-feedback">
+                            @error('title')
+                                {{ $message }}
+                            @enderror
+                        </div>
                 </div>
 
                 {{-- ? image --}}

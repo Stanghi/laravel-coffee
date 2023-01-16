@@ -11,10 +11,9 @@ class Coffee extends Model
 {
     use HasFactory;
 
-    protected $fillables = [
+    protected $fillable = [
         'title',
         'slug',
-        'description',
         'description',
         'ingredients',
         'image',
