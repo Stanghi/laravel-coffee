@@ -35,8 +35,7 @@
                                         class="fa-solid fa-eye"></i></a>
                                 <a href="#" title="Edit" class="btn btn-outline-primary"><i
                                         class="fa-solid fa-pen"></i></a>
-                                <a href="#" title="Delete" class="btn btn-outline-danger"><i
-                                        class="fa-solid fa-trash"></i></a>
+                                @include('partials.form-delete', $coffee)
                             </div>
                         </td>
                     </tr>
