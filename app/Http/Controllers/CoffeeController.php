@@ -14,7 +14,7 @@ class CoffeeController extends Controller
      */
     public function index()
     {
-        $coffees = Coffee::orderBy('id', 'desc')->get();
+        $coffees = Coffee::orderBy('id', 'desc')->paginate(10);
         return view('coffees.index', compact('coffees'));
     }
 
