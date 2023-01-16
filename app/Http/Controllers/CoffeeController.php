@@ -90,6 +90,7 @@ class CoffeeController extends Controller
      */
     public function destroy(Coffee $coffee)
     {
-        //
+        $coffee->delete();
+        return redirect()->route('coffees.index')->with('success', "La bevanda $coffee->title è stata eliminata");
     }
 }
