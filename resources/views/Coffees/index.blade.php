@@ -3,6 +3,8 @@
 @section('content')
     <div class="container">
 
+        <a href=" {{route('coffees.create')}} " class="btn btn-primary my-2">Add Coffee</a>
+
         <table class="table table-striped">
             <thead>
                 <tr>
