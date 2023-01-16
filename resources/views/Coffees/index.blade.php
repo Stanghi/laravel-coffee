@@ -42,5 +42,8 @@
                 @endforeach
             </tbody>
         </table>
+
+        <div class="d-flex justify-content-center"> {{$coffees->links()}} </div>
+
     </div>
 @endsection
