@@ -6,6 +6,6 @@
     <img class="mb-4" src="{{ $coffee->image }}" alt="{{ $coffee->title }}">
     <h3>{{ $coffee->title }}</h3>
     <p>{{ $coffee->description }}</p>
-    <p>{{ $coffee->ingredients }}</p>
+    <p>List: {{ $coffee->ingredients }}</p>
  </div>
 @endsection
